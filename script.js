@@ -12,15 +12,17 @@ function clickNumber() {
     let nums = [];
     const division = total.getInt()/amountOfNumbers.getInt();
     for (let i = 0; i < amountOfNumbers.getInt() - 1; i++) {
-        let point = Math.ceil();
-        let n = getRandomInt(point - margin.getInt(), point + margin.getInt());
+        const point = Math.ceil(division);
+        const start = clamp(point - margin.getInt(), 0, division);
+        const end = clamp(point + margin.getInt(), division, total.getInt());
+        let n = getRandomInt(start, end);
         n = clamp(n, 0, total.getInt() - sum);
         sum += n;
         nums.push(n);
         outputField.value += n + ", ";
     }
     const lastValue = total.getInt() - sum;
-
+    
     nums.push(lastValue);
     outputField.value += lastValue;
     outputField.value += "\nSum: " + sumArray(nums);
@@ -41,4 +43,8 @@ function sumArray(arr) {
     for (let i in arr)
         sum += arr[i];
     return sum;
+}
+
+function distribute(arr, amt) {
+
 }
