@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Political Random Numbers</title>
+        <link rel="stylesheet" href="reset.css"/>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="container">
+            <label>
+                Total:
+                <input class="total-field" type="number" placeholder="Total"/>
+            </label>
+            <label>
+                Amount of numbers:
+                <input class="amount-of-numbers" type="number" placeholder="Amount of numbers"/>
+            </label>
+            <label>
+                Margin:
+                <input class="margin" type="number" placeholder="Margin"/>
+            </label>
+            <button onclick="clickNumber()">Generate numbers</button>
+            <textarea class="output-field" readonly="true"></textarea>
+        </div>
+        <script src="fieldvar.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
